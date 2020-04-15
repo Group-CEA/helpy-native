@@ -12,6 +12,7 @@ import Authhome from "./src/Screens/AuthhomeScreen";
 import NotifiScreen from "./src/Screens/NotifiScreen";
 import HomeScreen from "./src/Screens/HomeScreen";
 import StatisticScreen from "./src/Screens/StatisticScreen";
+import BletestScreen from './src/Screens/BletestScreen';
 import ResolveofAuthScreen from "./src/Screens/ResolveofAuthScreen";
 import { Provider as AuthProvider } from "./src/context/AuthContext";
 import { setNavigator } from "./src/NavigationRef";
@@ -176,6 +177,10 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
     } else {
       if (routeName === "Statistic") {
         iconName = `ios-stats`;
+      }else{
+        if(routeName === "BLE"){
+          iconName = `ios-bluetooth`;
+        }
       }
     }
   }
@@ -216,6 +221,7 @@ const switchNavigator = createSwitchNavigator({
   mainFlow: createBottomTabNavigator(
     {
       Home: HomeScreen,
+      BLE: BletestScreen,
       Notification: NotifiScreen,
       Statistic: StatisticScreen,
       Account: AccountScreen,

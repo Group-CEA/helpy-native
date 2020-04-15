@@ -18,7 +18,6 @@ const ContactPersons = (props) => {
   return (
     <View style={styles.card}>
       <Image style={styles.image} source={contact}></Image>
-
       <Text
         style={{
           padding: 20,
